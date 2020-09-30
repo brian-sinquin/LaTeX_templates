@@ -10,4 +10,5 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: CV/
+          latexmk_use_xelatex: true
           root_file: main.tex
