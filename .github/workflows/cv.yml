@@ -7,7 +7,9 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
+        uses: xu-cheng/latex-action@master
         with:
           working_directory: CV/
           root_file: main.tex
+          pre_compile: "tlmgr update --all"
+          latexmk_use_lualatex: true
