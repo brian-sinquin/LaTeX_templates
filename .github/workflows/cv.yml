@@ -9,6 +9,7 @@ jobs:
       - name: Compile CV LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
+          extra_system_packages: "fontawesome"
           working_directory: CV/
           latexmk_use_xelatex: true
           root_file: main.tex
