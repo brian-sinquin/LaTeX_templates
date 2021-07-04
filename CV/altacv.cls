@@ -123,6 +123,8 @@
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
   {\end{adjustwidth}}
 
+\newfontfamily\headingfont[]{Dancing Script}
+
 \newcommand{\emailsymbol}{\faAt}
 \newcommand{\permis}{\faCar}
 \newcommand{\phonesymbol}{\faPhone}
@@ -133,6 +135,8 @@
 \newcommand{\githubsymbol}{\faGithub}
 \newcommand{\orcidsymbol}{\aiOrcid}
 \newcommand{\mailsymbol}{\faEnvelope}
+\newcommand{\paradiselab}{\faGraduationCap}
+
 
 \newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.5em}#2\hspace{2em}}}
 
@@ -148,6 +152,7 @@
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
+
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
 
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
@@ -156,7 +161,7 @@
   \begingroup
     \ifdef{\@photodiameter}{\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
     \raggedright\color{emphasis}%
-    {\Huge\bfseries\MakeUppercase{\@name}\par}
+    {\fontsize{30}{40}\bfseries{\@name}\par}
     \medskip
     {\large\bfseries\color{accent}\@tagline\par}
     \medskip
@@ -189,13 +194,10 @@
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  {\noindent\color{emphasis}\large{#1} \ifstrequal{#3}{}{}{{\hfill\small\makebox[0.4\linewidth][l]{\hfill\faCalendar\hspace{0.5em}#3}}}}
+  \smallskip\normalsize\par
   \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
-  \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
+  {\noindent\textbf{\color{accent}#2}} \ifstrequal{#4}{}{}{{\hfill\small\makebox[0.5\linewidth][l]{\hfill\faMapMarker\hspace{0.5em}#4}}}}\par
   \medskip\normalsize
 }
 
@@ -211,10 +213,15 @@
   \tikz[baseline]\node[anchor=base,draw=body!30,rounded corners,inner xsep=1ex,inner ysep =0.75ex,text height=1.5ex,text depth=.25ex]{#1};
 }
 
-\newcommand{\cvskill}[2]{%
+\newcommand{\cvskillnote}[2]{%
 \textcolor{emphasis}{\textbf{#1}}\hfill
 \foreach \x in {1,...,5}{%
-  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
+  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\small\ratingmarker}}\par%
+}
+
+\newcommand{\cvskill}[2]{%
+	\textcolor{emphasis}{\textbf{#1}}\hfill
+	\par%
 }
 
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226

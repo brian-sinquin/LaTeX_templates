@@ -26,6 +26,8 @@
 \documentclass[9pt,a4paper,academicons]{altacv}
 
 
+\usepackage[backend=biber,bibencoding=utf8, style=authoryear]{biblatex} %biber war fehlerhaft / sorting wird verwendet damit es der Reihenfolge entpsricht
+%\addbibresource{pubs.bib}
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
@@ -47,12 +49,17 @@
 \fi
 
 % Change the colours if you want to
-\definecolor{Mulberry}{HTML}{72243D}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
+
+\definecolor{dark}{HTML}{0f6856}
+\definecolor{ldark}{HTML}{32918d}
+
+
+
+\definecolor{SlateGrey}{HTML}{0f3936}
 \definecolor{LightGrey}{HTML}{444444}
-\colorlet{heading}{Sepia}
-\colorlet{accent}{Mulberry}
-\colorlet{emphasis}{SlateGrey}
+\colorlet{heading}{SlateGrey}
+\colorlet{accent}{SlateGrey}
+\colorlet{emphasis}{dark}
 \colorlet{body}{LightGrey}
 
 % Change the bullets for itemize and rating marker
@@ -65,13 +72,17 @@
 	colorlinks=true,
 	linkcolor=SlateGrey,
 	filecolor=magenta,      
-	urlcolor=cyan,
+	urlcolor=ldark,
 }
 
 \begin{document}
-\name{Brian SINQUIN}
-\tagline{Ph.D Student in photonics}
-\photo{2.8cm}{Fiber}
+\name{\headingfont{Brian Sinquin}}
+\tagline{Doctorant en physique des LASERs / Ph.D Student in Photonics \\
+\small{INSA, Institut FOTON (Université Rennes 1) UMR 6082 \'Equipe DOP}\\
+\vspace{1em}
+\color{SlateGrey}{``\small{\textit{ Dynamique à retard dans les LASERs; Applications à la génération de signaux micro-ondes et au LiDAR chaotique }}}'' 
+}
+\photo{2.8cm}{ID}
 \personalinfo{%
   % Not all of these are required!
   % You can add your own with \printinfo{symbol}{detail}
@@ -103,19 +114,21 @@
 
 \cvsection[page1sidebar]{\smallskip Formations}
 
-\cvevent{Master 2 Parcours Photonique (Physique fondamentale et appliquée)}{Université de Bretagne Occidentale}{septembre 2019 -- septembre 2020}{Brest}
+\cvevent{Master 2 Parcours Photonique}{Université de Bretagne Occidentale}{année 2019 -- 2020}{Brest}
+\textit{Mention bien (Moy. 15.75/20 Rang 1/4)}\smallskip
 \small{
 \begin{itemize}
 \item Optique intégrée
 \item LASERs et Télécommunication
 \item Propagation optique \& Milieux diffusants
+\item Projet bibliographique : Génération de super-continuums dans les fibres micro-structurées
 \end{itemize}
 }
 
 \divider
 
-\cvevent{Master 1 Physique fondamentale et appliquée}{Université de Bretagne Occidentale}{septembre 2018 -- juin 2019}{Brest}
-\textbf{Mention assez bien (Moy. 13.446/20 Rang 1/11)}
+\cvevent{Master 1 Physique fondamentale et appliquée}{Université de Bretagne Occidentale}{année 2018 -- 2019}{Brest}
+\textit{Mention assez bien (Moy. 13.446/20 Rang 1/11)}\smallskip
 \small{
 \begin{itemize}
 \item Théorie du signal
@@ -126,8 +139,8 @@
 }
 \divider
 
-\cvevent{Licence de physique}{Université de Bretagne Occidentale}{septembre 2015 -- juin 2018}{Brest}
-\textbf{Mention très bien en L3 (Moy. 16/20 Rang 1/20 )}
+\cvevent{Licence de physique}{Université de Bretagne Occidentale}{années 2015 -- 2018}{Brest}
+\textit{Mention très bien en L3 (Moy. 16/20 Rang 1/20 )}\smallskip
 \small{
 \begin{itemize}
 \item Optique ondulatoire
@@ -154,7 +167,7 @@
 
 \divider
 
-\cvevent{Stagiaire M1}{OPTIMAG (Université de Bretagne Occidentale)}{avril 2019 -- juin 2019}{Brest}
+\cvevent{Stagiaire M1}{OPTIMAG (UBO)}{avril 2019 -- juin 2019}{Brest}
 
 \textbf{Mesure ultra-rapide du pouvoir rotatoire par codage spectral de la
 polarisation}
@@ -196,8 +209,51 @@ polarisation}
 \medskip
 
 
+\newpage
+
+\begin{fullwidth}
+%\cvsection{Publications}
+%\nocite{*}
+%
+%\begingroup
+%\renewcommand{\section}[2]{}%
+%%\renewcommand{\chapter}[2]{}% for other classes
+%\printbibliography
+%\endgroup
 
 
+\cvsection{Diffusion}
+
+\cvevent{CLEO\textregistered/Europe-EQEC 2021}{Conference on Lasers and Electro-Optics}{21--25 juin 2021}{Munich -- Allemagne}
+{\quote{Low phase noise microwave generation from a direct-modulation optoelectronic oscillator (DM-OEO)}}
+
+\smallskip
+
+Présentation orale de 15 minutes en visio-conférence (COVID)
+
+\divider
+
+\cvevent{Société Française d'Optique}{OPTIQUE Dijon 2021}{5--9 juillet 2021}{Dijon -- France}
+{\quote{Oscillateur Opto-Électronique à modulation directe de faible bruit de phase}}
+
+\smallskip
+
+Présentation de poster lors de l'événement
+
+\cvsection{Pédagogie}
+
+
+
+
+\cvevent{Enseignements en première année de thèse}{Université de Rennes 1}{année 2021}{Rennes}
+
+	\begin{itemize}
+		\item TP d'optique géométrique \textbf{(L1)} -- 16h
+		\item TD Systèmes et Signaux pour la Physique \textbf{(L3)} -- 10h
+
+	\end{itemize}
+
+\end{fullwidth}
 %% If the NEXT page doesn't start with a \cvsection but you'd
 %% still like to add a sidebar, then use this command on THIS
 %% page to add it. The optional argument lets you pull up the
