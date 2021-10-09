@@ -26,8 +26,9 @@
 \documentclass[9pt,a4paper,academicons]{altacv}
 
 
-\usepackage[backend=biber,bibencoding=utf8, style=authoryear]{biblatex} %biber war fehlerhaft / sorting wird verwendet damit es der Reihenfolge entpsricht
-%\addbibresource{pubs.bib}
+%\usepackage[bibencoding=utf8]{biblatex} %biber war fehlerhaft / sorting wird verwendet damit es der Reihenfolge entpsricht
+\addbibresource{main}
+
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
@@ -53,7 +54,7 @@
 \definecolor{dark}{HTML}{0f6856}
 \definecolor{ldark}{HTML}{32918d}
 
-
+\usepackage{orcidlink}
 
 \definecolor{SlateGrey}{HTML}{0f3936}
 \definecolor{LightGrey}{HTML}{444444}
@@ -77,7 +78,7 @@
 
 \begin{document}
 \name{\headingfont{Brian Sinquin}}
-\tagline{Doctorant en physique des LASERs / Ph.D Student in Photonics \\
+\tagline{Doctorant en physique des LASERs / Ph.D Student in Photonics\\
 \small{INSA, Institut FOTON (Université Rennes 1) UMR 6082 \'Equipe DOP}\\
 \vspace{1em}
 \color{SlateGrey}{``\small{\textit{ Dynamique à retard dans les LASERs; Applications à la génération de signaux micro-ondes et au LiDAR chaotique }}}'' 
@@ -90,6 +91,7 @@
   \phone{06 52 40 41 62}
   \location{17 rue Marcel Rault, 22950 Trégueux}
   \voiture{Permis B}
+  {Orcid\Large \orcidlink{0000-0001-8278-394X}\hspace{2em}}
   \linkedin{\href{https://linkedin.com/in/brian-sinquin/}{linkedin.com/in/brian-sinquin/}}
   \github{\href{https://github.com/ParadiseLab/}{ParadiseLab}}
  
@@ -154,7 +156,7 @@
 
 \cvsection{Expériences}
 
-\cvevent{Stagiaire M2}{SensUp (by Lumibird)}{février 2020 -- juillet 2020}{Lannion}
+\cvevent{Stage de Master 2}{SensUp (by Lumibird)}{février 2020 -- juillet 2020}{Lannion}
 
 \textbf{Optimisation et caractérisation d'une chaîne LiDAR hétérodyne}
 \small{
@@ -167,7 +169,7 @@
 
 \divider
 
-\cvevent{Stagiaire M1}{OPTIMAG (UBO)}{avril 2019 -- juin 2019}{Brest}
+\cvevent{Stage de Master 1}{OPTIMAG (UBO)}{avril 2019 -- juin 2019}{Brest}
 
 \textbf{Mesure ultra-rapide du pouvoir rotatoire par codage spectral de la
 polarisation}
@@ -212,47 +214,76 @@ polarisation}
 \newpage
 
 \begin{fullwidth}
-%\cvsection{Publications}
-%\nocite{*}
-%
-%\begingroup
-%\renewcommand{\section}[2]{}%
-%%\renewcommand{\chapter}[2]{}% for other classes
-%\printbibliography
-%\endgroup
 
+\cvsection{Publications dans des revues spécialisées}
+\nocite{*}
 
+\begingroup
+\renewcommand{\section}[2]{}%
+%\renewcommand{\chapter}[2]{}% for other classes
+\printbibliography
+\endgroup
 \cvsection{Diffusion}
+
+\cvevent{Antennes et circuits: des micro-ondes aux ondes millimétriques et THz}{GDR Ondes 2021}{18 mars 2021}{France}
+{\quote{Low phase noise direct-modulation Optoelectronic Oscillator}}
+
+\smallskip
+
+\href{https://www.youtube.com/watch?v=NiCSm7F7ba8}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+
+\divider
+
+
+\cvevent{Journée du Club Optique Micro-ondes 2021}{Société Française d'Optique}{4 juin 2021}{Paris -- France}
+{\quote{Signaux Opto-RF très bas bruit de phase et instabilités dynamiques d’un OEO à modulation directe}}
+
+\smallskip
+
+\href{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03285993}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+
+\divider
 
 \cvevent{CLEO\textregistered/Europe-EQEC 2021}{Conference on Lasers and Electro-Optics}{21--25 juin 2021}{Munich -- Allemagne}
 {\quote{Low phase noise microwave generation from a direct-modulation optoelectronic oscillator (DM-OEO)}}
 
 \smallskip
 
-Présentation orale de 15 minutes en visio-conférence (COVID)
+\href{https://ieeexplore.ieee.org/document/9542636}{Présentation orale de 15 minutes en visio-conférence (COVID)}
 
 \divider
 
-\cvevent{Société Française d'Optique}{OPTIQUE Dijon 2021}{5--9 juillet 2021}{Dijon -- France}
+\cvevent{OPTIQUE Dijon 2021}{Société Française d'Optique}{5--9 juillet 2021}{Dijon -- France}
 {\quote{Oscillateur Opto-Électronique à modulation directe de faible bruit de phase}}
 
 \smallskip
 
-Présentation de poster lors de l'événement
+\href{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03284744}{Présentation de poster lors de l'événement}
 
 \cvsection{Pédagogie}
 
 
 
 
-\cvevent{Enseignements en première année de thèse}{Université de Rennes 1}{année 2021}{Rennes}
+\cvevent{Enseignements en première année de thèse}{Université de Rennes 1}{2020--2021}{Rennes}
 
 	\begin{itemize}
-		\item TP d'optique géométrique \textbf{(L1)} -- 16h
-		\item TD Systèmes et Signaux pour la Physique \textbf{(L3)} -- 10h
+		\item TP Optique géométrique \textbf{(Licence 1)} -- 16h
+		\item TD Systèmes et Signaux pour la Physique \textbf{(Licence 3)} -- 10h
 
 	\end{itemize}
 
+\divider
+
+\cvevent{Enseignements en deuxième année de thèse}{Université de Rennes 1}{2021--2022}{Rennes}
+
+\begin{itemize}
+	\item TP LASER \textbf{(Master 1)} -- 4h
+	\item TD \'Eléctromagnétisme \textbf{(Licence 2)} -- 20h
+	\item TD Systèmes et Signaux pour la Physique \textbf{(Licence 3)} -- 20h
+	
+\end{itemize}
+\divider
 \end{fullwidth}
 %% If the NEXT page doesn't start with a \cvsection but you'd
 %% still like to add a sidebar, then use this command on THIS
