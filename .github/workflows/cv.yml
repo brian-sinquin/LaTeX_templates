@@ -41,7 +41,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run beamer script
         run: |
-          xelatex main.tex
+          xelatex ./CV/main.tex
 
       - name: Commit
         run: |
