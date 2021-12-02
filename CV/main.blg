@@ -1,15 +1,68 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'main.blg'
-[127] biber-MSWIN64:340> INFO - === 
-[177] Biber.pm:415> INFO - Reading 'main.bcf'
-[311] Biber.pm:949> INFO - Using all citekeys in bib section 0
-[327] Biber.pm:4340> INFO - Processing section 0
-[338] Biber.pm:4531> INFO - Looking for bibtex format file 'pubs.bib' for section 0
-[419] bibtex.pm:1689> INFO - LaTeX decoding ...
-[429] bibtex.pm:1494> INFO - Found BibTeX data source 'pubs.bib'
-[475] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[475] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[476] Biber.pm:4168> INFO - Sorting list 'ydnt/global//global/global' of type 'entry' with template 'ydnt' and locale 'en-US'
-[476] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[479] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[480] bbl.pm:757> INFO - Output to main.bbl
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+Reallocating 'name_of_file' (item size: 1) to 5 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: main-blx.bib
+Database file #2: main.bib
+Biblatex version: 3.16
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 3 entries,
+            6393 wiz_defined-function locations,
+            1214 strings with 9556 characters,
+and the built_in function-call counts, 19147 in all, are:
+= -- 1449
+> -- 298
+< -- 51
++ -- 608
+- -- 125
+* -- 1323
+:= -- 2591
+add.period$ -- 0
+call.type$ -- 3
+change.case$ -- 18
+chr.to.int$ -- 42
+cite$ -- 4
+duplicate$ -- 2088
+empty$ -- 1583
+format.name$ -- 193
+if$ -- 3664
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 0
+newline$ -- 122
+num.names$ -- 82
+pop$ -- 855
+preamble$ -- 1
+purify$ -- 40
+quote$ -- 0
+skip$ -- 408
+stack$ -- 0
+substring$ -- 2518
+swap$ -- 375
+text.length$ -- 79
+text.prefix$ -- 2
+top$ -- 1
+type$ -- 90
+warning$ -- 0
+while$ -- 410
+width$ -- 0
+write$ -- 120
