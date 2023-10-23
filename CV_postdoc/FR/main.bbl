@@ -1,0 +1,242 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{cleo2023b}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=SB}{%
+         family={Sinquin},
+         familyi={S\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Romanelli},
+         familyi={R\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SBRM1}
+    \strng{fullhash}{SBRM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2023 Conference on Lasers and Electro-Optics Europe
+  {$\&$} European Quantum Electronics Conference (CLEO/Europe-EQEC)}
+    \verb{doi}
+    \verb 10.1109/CLEO/Europe-EQEC57999.2023.10231566
+    \endverb
+    \field{pages}{1\bibrangedash 1}
+    \field{title}{Accurate Measurement of the Linewidth Enhancement Factor of
+  Semiconductor Lasers by a Simple Technique}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Sinquin2023}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SB}{%
+         family={Sinquin},
+         familyi={S\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Romanelli},
+         familyi={R\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Optica Publishing Group}%
+    }
+    \keyw{Distributed feedback lasers; Optical feedback; Optical fields;
+  Optical networks; Semiconductor lasers; Vertical cavity surface emitting
+  lasers}
+    \strng{namehash}{SBRM1}
+    \strng{fullhash}{SBRM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1364/OL.483776
+    \endverb
+    \field{number}{4}
+    \field{pages}{863\bibrangedash 866}
+    \field{title}{Determination of the linewidth enhancement factor of
+  semiconductor lasers by complete optical field reconstruction}
+    \field{volume}{48}
+    \field{journaltitle}{Opt. Lett.}
+    \field{year}{2023}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{cleo2023a}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=SB}{%
+         family={Sinquin},
+         familyi={S\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Vallet},
+         familyi={V\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Alouini},
+         familyi={A\bibinitperiod},
+         given={Mehdi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Romanelli},
+         familyi={R\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SB+1}
+    \strng{fullhash}{SBVMAMRM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2023 Conference on Lasers and Electro-Optics Europe
+  {$\&$} European Quantum Electronics Conference (CLEO/Europe-EQEC)}
+    \verb{doi}
+    \verb 10.1109/CLEO/Europe-EQEC57999.2023.10231990
+    \endverb
+    \field{pages}{1\bibrangedash 1}
+    \field{title}{Direct-Modulation Optoelectronic Oscillator for Optical
+  Frequency Comb and Pulse Generation}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Sinquin2021}{article}{}
+    \name{author}{6}{}{%
+      {{hash=SB}{%
+         family={Sinquin},
+         familyi={S\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Romanelli},
+         familyi={R\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bouhier},
+         familyi={B\bibinitperiod},
+         given={Steve},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Frein},
+         familyi={F\bibinitperiod},
+         given={Ludovic},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Alouini},
+         familyi={A\bibinitperiod},
+         given={Mehdi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Vallet},
+         familyi={V\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SB+1}
+    \strng{fullhash}{SBRMBSFLAMVM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \verb{doi}
+    \verb 10.1109/JLT.2021.3111703
+    \endverb
+    \field{number}{24}
+    \field{pages}{7788\bibrangedash 7793}
+    \field{title}{Low Phase Noise Direct-Modulation Optoelectronic Oscillator}
+    \field{volume}{39}
+    \field{journaltitle}{Journal of Lightwave Technology}
+    \field{year}{2021}
+  \endentry
+
+  \entry{cleo2021}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=SB}{%
+         family={Sinquin},
+         familyi={S\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Romanelli},
+         familyi={R\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Bouhier},
+         familyi={B\bibinitperiod},
+         given={Steve},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AM}{%
+         family={Alouini},
+         familyi={A\bibinitperiod},
+         given={Mehdi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VM}{%
+         family={Vallet},
+         familyi={V\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SB+1}
+    \strng{fullhash}{SBRMBSAMVM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{2021 Conference on Lasers and Electro-Optics Europe
+  {$\&$} European Quantum Electronics Conference (CLEO/Europe-EQEC)}
+    \verb{doi}
+    \verb 10.1109/CLEO/Europe-EQEC52157.2021.9542636
+    \endverb
+    \field{pages}{1\bibrangedash 1}
+    \field{title}{Low phase noise microwave generation from a direct-modulation
+  optoelectronic oscillator (DM-OEO)}
+    \field{year}{2021}
+  \endentry
+\enddatalist
+\endinput

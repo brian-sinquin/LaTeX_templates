@@ -1,0 +1,379 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9pt,a4paper,academicons]{altacv}
+
+
+%\usepackage[bibencoding=utf8]{biblatex} %biber war fehlerhaft / sorting wird verwendet damit es der Reihenfolge entpsricht
+\addbibresource{main}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.3cm,right=8.5cm,marginparwidth=6cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+\usepackage{hyperref}
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+
+% \definecolor{dark}{HTML}{0f6856}
+% \definecolor{ldark}{HTML}{32918d}
+% \definecolor{SlateGrey}{HTML}{0f3936}
+% \definecolor{LightGrey}{HTML}{444444}
+
+\definecolor{dark}{HTML}{222255}
+\definecolor{ldark}{HTML}{222255}
+\definecolor{SlateGrey}{HTML}{222266}
+\definecolor{LightGrey}{HTML}{444455}
+
+\usepackage{orcidlink}
+
+
+\colorlet{heading}{SlateGrey}
+\colorlet{accent}{SlateGrey}
+\colorlet{emphasis}{dark}
+\colorlet{body}{black}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=SlateGrey,
+	filecolor=magenta,      
+	urlcolor=ldark,
+}
+
+
+\begin{document}
+\name{\headingfont{Brian Sinquin}}
+\tagline{Doctorant en physique des LASERs / Ph.D Student in Photonics\\
+  \small{INSA, Institut FOTON (Université Rennes 1) UMR 6082 \'Equipe DOP}\\
+  \vspace{1em}
+  \color{SlateGrey}{``\small{\textit{ Oscillateur optoélectronique à modulation directe. Génération de signaux micro-ondes et d'impulsions optiques courtes }}}''
+}
+\photo{2.8cm}{ID}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{brian.sinquin@gmail.com}
+  \phone{06 52 40 41 62}
+  \location{3 rue Robert Rême, 35000 Rennes}
+  \voiture{Permis B}
+  {{\Large\orcidlink{0000-0001-8278-394X}}\hspace{0.5em}0000-0001-8278-394X \hspace{2em}}
+  \linkedin{\href{https://linkedin.com/in/brian-sinquin/}{linkedin.com/in/brian-sinquin/}}
+  % \github{\href{https://github.com/ParadiseLab/}{ParadiseLab}}
+
+  % \github{github.com/brian.sinquin}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+  \makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Expériences}
+
+
+\cvevent{Doctorat (soutenance prévue le 14/12/2023)}{INSA,  Univ. Rennes, Institut FOTON UMR 6082 \'Equipe DOP}{2020 -- 2023}{Rennes}
+\textbf{Oscillateur optoélectronique à modulation directe. Génération de signaux micro-ondes et d'impulsions optiques courtes}\smallskip
+
+Travaux dirigés par \textbf{Dr. Marco Romanelli} (marco.romanelli@univ-rennes.fr)
+\small{
+	\begin{itemize}
+		\item Simulation numérique
+		\item Caractérisation photonique
+		\item Développement logiciel et traitement du signal
+	\end{itemize}
+}
+
+\divider
+
+\cvevent{Stage de Master 2}{SensUp (by Lumibird)}{février -- juillet 2020}{Lannion}
+
+\textbf{Optimisation et caractérisation d'une chaîne LiDAR hétérodyne}
+\small{
+	\begin{itemize}
+		\item Simulation numérique
+		\item Caractérisation photonique
+		\item Développement logiciel et traitement du signal
+	\end{itemize}
+}
+
+\divider
+
+\cvevent{Stage de Master 1}{OPTIMAG (UBO)}{avril -- juin 2019}{Brest}
+
+\textbf{Mesure ultra-rapide du pouvoir rotatoire par codage spectral de la
+	polarisation}
+\small{
+	\begin{itemize}
+		\item Simulation numérique
+		\item Polarisation
+		\item Influence du bruit
+	\end{itemize}
+}
+
+
+
+
+\cvsection{Formations}
+
+\cvevent{Master 2 Parcours Photonique}{Université de Bretagne Occidentale}{2019 -- 2020}{Brest}
+\textit{Mention bien (Major)}\smallskip
+\small{
+  \begin{itemize}
+    \item Optique intégrée
+    \item LASERs et Télécommunication
+    \item Propagation optique \& Milieux diffusants
+    \item Projet bibliographique : Génération de super-continuums dans les fibres micro-structurées
+  \end{itemize}
+}
+
+\divider
+
+\cvevent{Master 1 Physique fondamentale et appliquée}{Université de Bretagne Occidentale}{2018 -- 2019}{Brest}
+\textit{Mention assez bien (Major)}\smallskip
+\small{
+  \begin{itemize}
+    \item Théorie du signal
+    \item Optique non linéaire, anisotrope
+    \item Physique statistique
+    \item Matière condensée
+  \end{itemize}
+}
+\divider
+
+\cvevent{Licence de physique}{Université de Bretagne Occidentale}{2015 -- 2018}{Brest}
+\textit{Mention très bien en L3 (Major)}\smallskip
+\small{
+  \begin{itemize}
+    \item Optique ondulatoire
+    \item Mécanique quantique
+    \item Ondes et matière
+    \item Physique expérimentale et numérique
+    \item Projet expérimental de L3 en laboratoire : Caractérisation de biomatériaux par colorimétrie
+  \end{itemize}
+}
+
+
+
+
+
+%%\divider
+
+%%\cvevent{Agent d'accueil}{CROUS}{septembre 2018 -- juin 2019}{Brest}
+%%\textbf{Centre Régional des Œuvres Universitaires et Scolaires}
+%%\small{
+%%\begin{itemize}
+%%\item Accueil
+%%\item Distribution du courrier
+%%\item Constitution de dossiers administratifs
+%%\item Paiements bancaires (CB, chèques)
+%%\end{itemize}
+%%}
+
+\medskip
+
+
+\newpage
+
+\begin{fullwidth}
+
+  \cvsection{Publications dans des revues spécialisées}
+
+
+
+  \begin{itemize}
+    \item \normalsize \fullcite{Sinquin2021}
+    \item \normalsize \fullcite{Sinquin2023}
+  \end{itemize}
+
+  % \nocite{*}
+
+  % \begingroup
+  % \renewcommand{\section}[2]{}%
+  % %\renewcommand{\chapter}[2]{}% for other classes
+  % \printbibliography
+  % \endgroup
+  \cvsection{Congrès internationaux à comités de lecture}
+  \cvevent{CLEO\textregistered/Europe-EQEC 2021}{Conference on Lasers and Electro-Optics}{21--25 juin 2021}{}
+
+\begin{itemize} \item \fullcite{cleo2021}   \end{itemize}
+  
+\smallskip
+  
+  \href{https://ieeexplore.ieee.org/document/9542636}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+  
+  \divider
+  
+  
+  
+  
+  \cvevent{CLEO\textregistered/Europe-EQEC 2023}{Conference on Lasers and Electro-Optics}{26--30 juin 2023}{Munich -- Allemagne}
+  
+\begin{itemize} \item \fullcite{cleo2023a}   \end{itemize}
+
+\smallskip
+  
+  
+  \href{https://doi.org/10.1109/CLEO/Europe-EQEC57999.2023.10231990}{Présentation orale de 15 minutes}
+  
+  \divider
+  
+  \cvevent{CLEO\textregistered/Europe-EQEC 2023}{Conference on Lasers and Electro-Optics}{26--30 juin 2023}{Munich -- Allemagne}
+  
+\begin{itemize} \item \fullcite{cleo2023b}   \end{itemize}
+
+\smallskip
+  
+  \href{https://doi.org/10.1109/CLEO/Europe-EQEC57999.2023.10231566}{Présentation orale de 15 minutes}
+  
+  \cvsection{Congrès nationaux à comités de lecture}
+  
+  \cvevent{Journée du Club Optique Micro-ondes 2021}{Société Française d'Optique}{4 juin 2021}{}
+{\quote{Signaux Opto-RF très bas bruit de phase et instabilités dynamiques d’un OEO à modulation directe}}
+
+\smallskip
+
+\href{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03285993}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+
+\divider
+
+
+\cvevent{OPTIQUE Dijon 2021}{Société Française d'Optique}{5--9 juillet 2021}{Dijon -- France}
+{\quote{Oscillateur Opto-Électronique à modulation directe de faible bruit de phase}}
+
+\smallskip
+
+\href{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03284744}{Présentation de poster lors de l'événement}
+
+\divider
+
+\cvevent{OPTIQUE Nice 2022}{Société Française d'Optique}{4--8 juillet 2022}{Nice -- France}
+
+{\quote{Génération de peignes de fréquence et d’impulsions dans un Oscillateur Opto-Électronique à modulation directe}}
+
+\smallskip
+
+\href{https://hal.science/hal-03988116}{Présentation orale de 15 minutes}
+
+\divider
+
+
+
+\cvevent{Journée du Club Optique Micro-ondes 2022}{Société Française d'Optique}{13 juin 2022}{Besançon -- France}
+{\quote{Oscillateur optoélectronique (OEO) générant des peignes de fréquences et des trains d’impulsions optiques}}
+\medskip
+
+\href{https://hal.science/hal-03986413}{Présentation de poster lors de l'évenement}
+
+\divider
+
+\cvevent{Journée du Club Optique Micro-ondes 2023}{Société Française d'Optique}{19 juin 2023}{}
+{\quote{Direct-Modulation OEO for Optical Pulses and Frequency combs generation}}
+
+\medskip
+
+\href{https://hal.science/hal-
+	04133619}{Présentation de poster lors de l'évenement en visio-conférence}
+
+\newpage
+
+  \cvsection{Autres communications scientifiques}
+
+    \cvevent{Antennes et circuits: des micro-ondes aux ondes millimétriques et THz}{GDR Ondes 2021}{18 mars 2021}{}
+    
+{\quote{Low phase noise direct-modulation Optoelectronic Oscillator}}
+
+\smallskip
+
+\href{https://www.youtube.com/watch?v=NiCSm7F7ba8}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+
+
+
+
+
+ 
+
+  \cvsection{Enseignement}
+
+  \cvevent{Enseignements en première année de thèse}{Université de Rennes 1}{2020--2021}{Rennes -- France}
+
+  \begin{itemize}
+    \item TP Optique géométrique \textbf{(Licence 1)} -- 16h
+    \item TD Systèmes et Signaux pour la Physique \textbf{(Licence 3)} -- 10h
+
+  \end{itemize}
+
+  \divider
+
+  \cvevent{Enseignements en deuxième année de thèse}{Université de Rennes 1}{2021--2022}{Rennes -- France}
+
+  \begin{itemize}
+    \item TP LASER \textbf{(Master 1)} -- 4h
+    \item TD \'Eléctromagnétisme \textbf{(Licence 2)} -- 20h
+    \item TD Systèmes et Signaux pour la Physique \textbf{(Licence 3)} -- 10h
+
+  \end{itemize}
+  \divider
+  
+    \cvsection{Encadrement}
+\end{fullwidth}
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
