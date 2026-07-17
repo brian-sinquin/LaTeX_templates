@@ -1,53 +1,44 @@
-# This is a basic workflow to help you get started with Actions
+name: Build LaTeX CVs
 
-name: run_latex
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
 on:
   push:
-    branches: [ master ]
+    branches: [main, master, hermes]
   pull_request:
-    branches: [ master ]
+    branches: [main, master]
+  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build_PDFs:
-    # The type of runner that the job will run on
+  build-cv:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        cv:
+          - name: CV_FR
+            dir: CV
+            file: main
+          - name: Postdoc_EN
+            dir: CV_postdoc/EN
+            file: main
+          - name: Postdoc_FR
+            dir: CV_postdoc/FR
+            file: main
+
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: xu-cheng/texlive-action/full@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: update texlive
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y texlive-xetex
-          sudo apt-get install -y latexmk
-          sudo apt-get install -y texlive-lang-german
-          sudo apt-get install -y texlive-fonts-recommended
-          sudo apt-get install -y texlive-fonts-extra
-          sudo apt-get install -y fonts-dancingscript
-          sudo apt-get install -y texlive-bibtex-extra biber
+      - name: Compile LaTeX document
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: ${{ matrix.cv.file }}.tex
+          working_directory: ${{ matrix.cv.dir }}
+          compiler: latexmk
+          args: -pdflatex -silent -bibtex-cond1 -use-make
 
-      - uses: actions/checkout@v2
-
-      - name: Pull
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git pull
-
-      # Runs a set of commands using the runners shell
-      - name: Run beamer script
-        working-directory: ./CV
-        run: |
-          xelatex main.tex
-
-      - name: Commit
-        run: |
-          git add .
-          git diff-index --quiet HEAD || git commit -m "action generated new PDFs using beamer"
-          git push
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.cv.name }}
+          path: ${{ matrix.cv.dir }}/${{ matrix.cv.file }}.pdf
+          retention-days: 90

@@ -86,7 +86,7 @@
     }
     }
   \else
-    \ClassError{AltaCV}{academicons unsupported by latex or pdflatex. Please compile with xelatex or lualatex}{Please compile with xelatex or lualatex to use the academicons option}
+    % pdflatex: skip academicons (no fontspec available)
   \fi
 \fi
 
@@ -123,7 +123,12 @@
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
     {\end{adjustwidth}}
 
-\newfontfamily\headingfont[]{Dancing Script}
+\ifxetexorluatex
+  \newfontfamily\headingfont[]{Dancing Script}
+\else
+  % pdflatex fallback: heading uses large bold serif
+  \newcommand{\headingfont}{\bfseries\fontfamily{lmr}\selectfont}
+\fi
 
 \newcommand{\emailsymbol}{\faAt}
 \newcommand{\permis}{\faCar}
@@ -135,7 +140,11 @@
 \newcommand{\linkedinsymbol}{\color{linkedin}\faLinkedin}
 \newcommand{\twittersymbol}{\faTwitter}
 \newcommand{\githubsymbol}{\faGithub}
-\newcommand{\orcidsymbol}{\aiOrcid}
+\ifxetexorluatex
+  \newcommand{\orcidsymbol}{\aiOrcid}
+\else
+  \newcommand{\orcidsymbol}{\textcolor{accent}{\normalfont\large\faCircle}}
+\fi
 \newcommand{\mailsymbol}{\faEnvelope}
 \newcommand{\paradiselab}{\faGraduationCap}
 
