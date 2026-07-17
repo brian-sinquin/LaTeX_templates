@@ -34,7 +34,7 @@ jobs:
           root_file: ${{ matrix.cv.file }}.tex
           working_directory: ${{ matrix.cv.dir }}
           compiler: latexmk
-          args: -pdf -silent -bibtex-cond -use-make
+          args: -pdf -silent -bibtex-cond
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
