@@ -16,29 +16,50 @@ jobs:
         cv:
           - name: CV_FR
             dir: CV
-            file: main
           - name: Postdoc_EN
             dir: CV_postdoc/EN
-            file: main
           - name: Postdoc_FR
             dir: CV_postdoc/FR
-            file: main
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
+      - name: Compile LaTeX (pdflatex + bibtex + pdflatex x2)
         uses: dante-ev/latex-action@2023-A
         with:
-          root_file: ${{ matrix.cv.file }}.tex
+          root_file: main.tex
           working_directory: ${{ matrix.cv.dir }}
-          compiler: latexmk
-          args: -pdf -silent -bibtex-cond
+          compiler: pdflatex
+          args: -interaction=nonstopmode -halt-on-error
+
+      - name: Run BibTeX
+        uses: dante-ev/latex-action@2023-A
+        with:
+          root_file: main
+          working_directory: ${{ matrix.cv.dir }}
+          compiler: bibtex
+          args: ''
+
+      - name: Compile LaTeX (pass 2)
+        uses: dante-ev/latex-action@2023-A
+        with:
+          root_file: main.tex
+          working_directory: ${{ matrix.cv.dir }}
+          compiler: pdflatex
+          args: -interaction=nonstopmode -halt-on-error
+
+      - name: Compile LaTeX (pass 3)
+        uses: dante-ev/latex-action@2023-A
+        with:
+          root_file: main.tex
+          working_directory: ${{ matrix.cv.dir }}
+          compiler: pdflatex
+          args: -interaction=nonstopmode -halt-on-error
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.cv.name }}
-          path: ${{ matrix.cv.dir }}/${{ matrix.cv.file }}.pdf
+          path: ${{ matrix.cv.dir }}/main.pdf
           retention-days: 90
