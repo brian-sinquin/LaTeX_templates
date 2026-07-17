@@ -72,7 +72,7 @@
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
-\renewcommand{\itemmarker}{{\small\textbullet}}
+
 \renewcommand{\ratingmarker}{\faCircle}
 
 \usepackage{hyperref}
@@ -88,8 +88,7 @@
 \name{\headingfont{Brian Sinquin}}
 \tagline{Doctorant en physique des LASERs / Ph.D Student in Photonics\\
   \small{INSA, Institut FOTON (Université Rennes 1) UMR 6082 \'Equipe DOP}\\
-  \vspace{1em}
-  \color{SlateGrey}{``\small{\textit{ Oscillateur optoélectronique à modulation directe. Génération de signaux micro-ondes et d'impulsions optiques courtes }}}''
+  \cvtaglinequote{Oscillateur optoélectronique à modulation directe. Génération de signaux micro-ondes et d'impulsions optiques courtes}
 }
 \photo{2.8cm}{ID}
 \personalinfo{%
@@ -99,7 +98,7 @@
   \phone{06 52 40 41 62}
   \location{3 rue Robert Rême, 35000 Rennes}
   \voiture{Permis B}
-  {{\Large\orcidlink{0000-0001-8278-394X}}\hspace{0.5em}Orcid \hspace{2em}}
+  \orcid{0000-0001-8278-394X}
   \linkedin{\href{https://linkedin.com/in/brian-sinquin/}{linkedin.com/in/brian-sinquin/}}
   % \github{\href{https://github.com/ParadiseLab/}{ParadiseLab}}
 
@@ -125,82 +124,69 @@
 \cvsection[page1sidebar]{\smallskip Formations}
 
 \cvevent{Master 2 Parcours Photonique}{Université de Bretagne Occidentale}{2019 -- 2020}{Brest}
-\textit{Mention bien (Moy. 15.75/20 Rang 1/4)}\smallskip
-\small{
-  \begin{itemize}
+\textit{Mention bien (Moy. 15.75/20 Rang 1/4)}
+\begin{cvlistdescription}
     \item Optique intégrée
     \item LASERs et Télécommunication
     \item Propagation optique \& Milieux diffusants
     \item Projet bibliographique : Génération de super-continuums dans les fibres micro-structurées
-  \end{itemize}
-}
+\end{cvlistdescription}
 
 \divider
 
 \cvevent{Master 1 Physique fondamentale et appliquée}{Université de Bretagne Occidentale}{2018 -- 2019}{Brest}
-\textit{Mention assez bien (Moy. 13.446/20 Rang 1/11)}\smallskip
-\small{
-  \begin{itemize}
+\textit{Mention assez bien (Moy. 13.446/20 Rang 1/11)}
+\begin{cvlistdescription}
     \item Théorie du signal
     \item Optique non linéaire, anisotrope
     \item Physique statistique
     \item Matière condensée
-  \end{itemize}
-}
+\end{cvlistdescription}
 \divider
 
 \cvevent{Licence de physique}{Université de Bretagne Occidentale}{2015 -- 2018}{Brest}
-\textit{Mention très bien en L3 (Moy. 16/20 Rang 1/20 )}\smallskip
-\small{
-  \begin{itemize}
+\textit{Mention très bien en L3 (Moy. 16/20 Rang 1/20 )}
+\begin{cvlistdescription}
     \item Optique ondulatoire
     \item Mécanique quantique
     \item Ondes et matière
     \item Physique expérimentale et numérique
     \item Projet expérimental de L3 en laboratoire : Caractérisation de biomatériaux par colorimétrie
-  \end{itemize}
-}
+\end{cvlistdescription}
 
 
 \cvsection{Expériences}
 
 \cvevent{Stage de Master 2}{SensUp (by Lumibird)}{février -- juillet 2020}{Lannion}
 
-\textbf{Optimisation et caractérisation d'une chaîne LiDAR hétérodyne}
-\small{
-  \begin{itemize}
+\cvjobtitle{Optimisation et caractérisation d'une chaîne LiDAR hétérodyne}
+\begin{cvlistdescription}
     \item Simulation numérique
     \item Caractérisation photonique
     \item Développement logiciel et traitement du signal
-  \end{itemize}
-}
+\end{cvlistdescription}
 
 \divider
 
 \cvevent{Stage de Master 1}{OPTIMAG (UBO)}{avril -- juin 2019}{Brest}
 
-\textbf{Mesure ultra-rapide du pouvoir rotatoire par codage spectral de la
-  polarisation}
-\small{
-  \begin{itemize}
+\cvjobtitle{Mesure ultra-rapide du pouvoir rotatoire par codage spectral de la polarisation}
+\begin{cvlistdescription}
     \item Simulation numérique
     \item Polarisation
     \item Influence du bruit
-  \end{itemize}
-}
+\end{cvlistdescription}
 
 \divider
 
 \cvevent{Agent d'accueil}{CROUS}{septembre 2018 -- juin 2019}{Brest}
-\textbf{Centre Régional des Œuvres Universitaires et Scolaires}
-\small{
-  \begin{itemize}
+\cvjobtitle{Centre Régional des Œuvres Universitaires et Scolaires}
+\begin{cvlistdescription}
     \item Accueil
     \item Distribution du courrier
     \item Constitution de dossiers administratifs
     \item Paiements bancaires (CB, chèques)
-  \end{itemize}
-}
+\end{cvlistdescription}
 
 
 %%\divider
@@ -216,19 +202,15 @@
 %%\end{itemize}
 %%}
 
-\medskip
-
-
 \newpage
 
 \begin{fullwidth}
 
   \cvsection{Publications dans des revues spécialisées}
 
-  \renewcommand{\labelitemi}{$\bullet$}
   \begin{itemize}
-    \item   \large \fullcite{Sinquin2021}
-    \item   \large \fullcite{Sinquin2023}
+    \item   \fullcite{Sinquin2021}
+    \item   \fullcite{Sinquin2023}
   \end{itemize}
 
   % \nocite{*}
@@ -241,110 +223,79 @@
   \cvsection{Diffusion scientifique (Oraux/Posters)}
 
   \cvevent{Antennes et circuits: des micro-ondes aux ondes millimétriques et THz}{GDR Ondes 2021}{18 mars 2021}{France}
-  {\quote{Low phase noise direct-modulation Optoelectronic Oscillator}}
-
-  \smallskip
-
-  \href{https://www.youtube.com/watch?v=NiCSm7F7ba8}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+  \cveventtitle{Low phase noise direct-modulation Optoelectronic Oscillator}
+  \cveventlink{https://www.youtube.com/watch?v=NiCSm7F7ba8}{Présentation orale de 15 minutes en visio-conférence (COVID)}
 
   \divider
 
 
   \cvevent{Journée du Club Optique Micro-ondes 2021}{Société Française d'Optique}{4 juin 2021}{France}
-  {\quote{Signaux Opto-RF très bas bruit de phase et instabilités dynamiques d’un OEO à modulation directe}}
-
-  \smallskip
-
-  \href{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03285993}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+  \cveventtitle{Signaux Opto-RF très bas bruit de phase et instabilités dynamiques d’un OEO à modulation directe}
+  \cveventlink{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03285993}{Présentation orale de 15 minutes en visio-conférence (COVID)}
 
   \divider
 
   \cvevent{CLEO\textregistered/Europe-EQEC 2021}{Conference on Lasers and Electro-Optics}{21--25 juin 2021}{Munich -- Allemagne}
-  {\quote{Low phase noise microwave generation from a direct-modulation optoelectronic oscillator (DM-OEO)}}
-
-  \smallskip
-
-  \href{https://ieeexplore.ieee.org/document/9542636}{Présentation orale de 15 minutes en visio-conférence (COVID)}
+  \cveventtitle{Low phase noise microwave generation from a direct-modulation optoelectronic oscillator (DM-OEO)}
+  \cveventlink{https://ieeexplore.ieee.org/document/9542636}{Présentation orale de 15 minutes en visio-conférence (COVID)}
 
   \divider
 
   \cvevent{OPTIQUE Dijon 2021}{Société Française d'Optique}{5--9 juillet 2021}{Dijon -- France}
-  {\quote{Oscillateur Opto-Électronique à modulation directe de faible bruit de phase}}
-
-  \smallskip
-
-  \href{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03284744}{Présentation de poster lors de l'événement}
+  \cveventtitle{Oscillateur Opto-Électronique à modulation directe de faible bruit de phase}
+  \cveventlink{https://hal.archives-ouvertes.fr/FOTON-DOP/hal-03284744}{Présentation de poster lors de l'événement}
 
   \divider
 
   \cvevent{OPTIQUE Nice 2022}{Société Française d'Optique}{4--8 juillet 2022}{Nice -- France}
-
-  {\quote{Génération de peignes de fréquence et d’impulsions dans un Oscillateur Opto-Électronique à modulation directe}}
-
-  \smallskip
-
-  \href{https://hal.science/hal-03988116}{Présentation orale de 15 minutes}
+\cveventtitle{Génération de peignes de fréquence et d’impulsions dans un Oscillateur Opto-Électronique à modulation directe}
+\cveventlink{https://hal.science/hal-03988116}{Présentation orale de 15 minutes}
 
   \divider
 
 
 
   \cvevent{Journée du Club Optique Micro-ondes 2022}{Société Française d'Optique}{13 juin 2022}{Besançon -- France}
-  {\quote{Oscillateur optoélectronique (OEO) générant des peignes de fréquences et des trains d’impulsions optiques}}
-  \medskip
-
-  \href{https://hal.science/hal-03986413}{Présentation de poster lors de l'évenement}
+  \cveventtitle{Oscillateur optoélectronique (OEO) générant des peignes de fréquences et des trains d’impulsions optiques}
+  \cveventlink{https://hal.science/hal-03986413}{Présentation de poster lors de l'évenement}
 
   \divider
 
   \cvevent{Journée du Club Optique Micro-ondes 2023}{Société Française d'Optique}{19 juin 2023}{France}
-  {\quote{Direct-Modulation OEO for Optical Pulses and Frequency combs generation}}
-
-  \medskip
-
-  \href{https://hal.science/hal-
-    04133619}{Présentation de poster lors de l'évenement en visio-conférence}
+  \cveventtitle{Direct-Modulation OEO for Optical Pulses and Frequency combs generation}
+  \cveventlink{https://hal.science/hal-04133619}{Présentation de poster lors de l'évenement en visio-conférence}
 
   \divider
 
 
   \cvevent{CLEO\textregistered/Europe-EQEC 2023}{Conference on Lasers and Electro-Optics}{26--30 juin 2023}{Munich -- Allemagne}
-
-  {\quote{Direct-Modulation Optoelectronic Oscillator for Optical Frequency Comb and Pulse Generation}}
-
-  \smallskip
-
-  \href{https://doi.org/10.1109/CLEO/Europe-EQEC57999.2023.10231990}{Présentation orale de 15 minutes}
+\cveventtitle{Direct-Modulation Optoelectronic Oscillator for Optical Frequency Comb and Pulse Generation}
+\cveventlink{https://doi.org/10.1109/CLEO/Europe-EQEC57999.2023.10231990}{Présentation orale de 15 minutes}
 
   \divider
 
   \cvevent{CLEO\textregistered/Europe-EQEC 2023}{Conference on Lasers and Electro-Optics}{26--30 juin 2023}{Munich -- Allemagne}
-  {\quote{Accurate Measurement of the Linewidth Enhancement Factor of Semiconductor Lasers by a Simple Technique }}
-
-  \href{https://doi.org/10.1109/CLEO/Europe-EQEC57999.2023.10231566}{Présentation orale de 15 minutes}
+  \cveventtitle{Accurate Measurement of the Linewidth Enhancement Factor of Semiconductor Lasers by a Simple Technique }
+  \cveventlink{https://doi.org/10.1109/CLEO/Europe-EQEC57999.2023.10231566}{Présentation orale de 15 minutes}
 
   \newpage
 
   \cvsection{Pédagogie}
 
   \cvevent{Enseignements en première année de thèse}{Université de Rennes 1}{2020--2021}{Rennes}
-
-  \begin{itemize}
+\begin{cvlistdescription}
     \item TP Optique géométrique \textbf{(Licence 1)} -- 16h
     \item TD Systèmes et Signaux pour la Physique \textbf{(Licence 3)} -- 10h
-
-  \end{itemize}
+\end{cvlistdescription}
 
   \divider
 
   \cvevent{Enseignements en deuxième année de thèse}{Université de Rennes 1}{2021--2022}{Rennes}
-
-  \begin{itemize}
+\begin{cvlistdescription}
     \item TP LASER \textbf{(Master 1)} -- 4h
     \item TD \'Eléctromagnétisme \textbf{(Licence 2)} -- 20h
     \item TD Systèmes et Signaux pour la Physique \textbf{(Licence 3)} -- 10h
-
-  \end{itemize}
+\end{cvlistdescription}
   \divider
 \end{fullwidth}
 %% If the NEXT page doesn't start with a \cvsection but you'd

@@ -235,6 +235,29 @@
   \par%
 }
 
+% New commands for standardization
+\newcommand{\cvjobtitle}[1]{%
+  {\noindent\textbf{#1}}\par\medskip%
+}
+
+\newenvironment{cvlistdescription}{%
+  \small\begin{itemize}[leftmargin=1.5em,labelsep=0.5em,nosep,itemsep=0.15\baselineskip,after=\vskip0.15\baselineskip]%
+}{%
+  \end{itemize}%
+}
+
+\newcommand{\cveventlink}[2]{%
+  \smallskip\noindent\href{#1}{#2}\par%
+}
+
+\newcommand{\cvtaglinequote}[1]{%
+  \color{SlateGrey}{\small\textit{#1}}\par%
+}
+
+\newcommand{\cveventtitle}[1]{%
+  {\color{emphasis}\textit{#1}}\par%
+}
+
 % Adapted from @Jake's answer at http://tex.stackexchange.com/a/82729/226
 \newcommand{\wheelchart}[4][0]{%
   \begingroup\centering
