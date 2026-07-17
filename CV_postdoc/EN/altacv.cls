@@ -95,7 +95,7 @@
 \fi
 
 \RequirePackage{xcolor}
-\usepackage{twemojis}
+
 \colorlet{accent}{blue!70!black}
 \colorlet{heading}{black}
 \colorlet{emphasis}{black}
@@ -105,7 +105,6 @@
 
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
-\RequirePackage{fontawesome}
 \RequirePackage[skins]{tcolorbox}
 \RequirePackage{enumitem}
 \setlist{leftmargin=*,labelsep=0.5em,nosep,itemsep=0.25\baselineskip,after=\vskip0.25\baselineskip}
@@ -142,21 +141,20 @@
 \newcommand{\twittersymbol}{\faTwitter}
 \newcommand{\githubsymbol}{\faGithub}
 \ifxetexorluatex
-  \newcommand{\idsymbol}{\aiOrcid}
+  \newcommand{\orcidsymbol}{\aiOrcid}
 \else
-  \newcommand{\idsymbol}{\textcolor{accent}{\normalfont\large\faCircle}}
+  \newcommand{\orcidsymbol}{\textcolor{accent}{\normalfont\large\faCircle}}
 \fi
 \newcommand{\mailsymbol}{\faEnvelope}
 \newcommand{\paradiselab}{\faGraduationCap}
-\newcommand{\franceflag}{\twemoji{fr}}
-\newcommand{\ageicon}{\twemoji{candle}}
 
-\newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\large #1}\hspace{0.5em} \large \selectfont #2\hspace{1.5em}}}
+
+\newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\normalfont #1}\hspace{0.5em}#2\hspace{2em}}}
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
 \newcommand{\photo}[2]{\def\@photo{#2}\def\@photodiameter{#1}}
-\newcommand{\email}[1]{\printinfo{\mailsymbol}{#1}}
+\newcommand{\email}[1]{\printinfo{\emailsymbol}{#1}}
 \newcommand{\voiture}[1]{\printinfo{\permis}{#1}}
 \newcommand{\mailaddress}[1]{\printinfo{\mailsymbol}{#1}}
 \newcommand{\phone}[1]{\printinfo{\phonesymbol}{#1}}
@@ -164,11 +162,10 @@
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
-\newcommand{\orcid}[1]{\mbox{\textcolor{accent}{\large \orcidlink{#1}}\hspace{0.5em} \large  #1\hspace{2em}}}
+\newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 
-\newcommand{\france}{\printinfo{\franceflag}{Français}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
-\newcommand{\age}[1]{\printinfo{\ageicon}{#1}}
+
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
 
 \newcommand{\makecvheader}{%
@@ -179,7 +176,7 @@
       \medskip
       {\large\bfseries\color{accent}\@tagline\par}
       \medskip
-      {\footnotesize\bfseries\@personalinfo\par}
+      {\@personalinfo\par}%
       \ifdef{\@photodiameter}{%
     \end{minipage}\hfill%
     \begin{minipage}{\@photodiameter}
@@ -189,7 +186,7 @@
         \tikz\path[fill overzoom image={\@photo}]circle[radius=0.5\linewidth];
       \fi%
     \end{minipage}\par}{}%
-  \endgroup
+  \endgroup\medskip
 }
 
 \renewenvironment{quote}{\color{accent}\itshape\large}{\par}
@@ -208,10 +205,10 @@
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\noindent\large\textbf{\color{accent}#1} \ifstrequal{#3}{}{}{{\hfill\small\makebox[0.3\linewidth][l]{\hfill{\color{SlateGrey}\faCalendar}\hspace{0.5em}\bfseries #3}}}}
-  \normalsize\par
+  {\noindent\textbf{\color{accent}#1} \ifstrequal{#3}{}{}{{\hfill\small\makebox[0.4\linewidth][l]{\hfill{\color{SlateGrey}\faCalendar}\hspace{0.5em}#3}}}}
+  \smallskip\normalsize\par
   \ifstrequal{#2}{}{}{
-    {\noindent\color{emphasis}{#2}} \ifstrequal{#4}{}{}{{\hfill\small\makebox[0.3\linewidth][l]{\hfill{\color{red}\faMapMarker}\hspace{0.5em}#4}}}}\par
+    {\noindent\color{emphasis}\large{#2}} \ifstrequal{#4}{}{}{{\hfill\small\makebox[0.5\linewidth][l]{\hfill{\color{red}\faMapMarker}\hspace{0.5em}#4}}}}\par
   \medskip\normalsize
 }
 
